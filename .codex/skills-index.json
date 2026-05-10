@@ -3,7 +3,7 @@
   "name": "claude-code-skills",
   "description": "Production-ready skill packages for AI agents - Marketing, Engineering, Product, C-Level, PM, and RA/QM",
   "repository": "https://github.com/alirezarezvani/claude-skills",
-  "total_skills": 186,
+  "total_skills": 187,
   "skills": [
     {
       "name": "business-growth-skills",
@@ -588,6 +588,12 @@
       "description": "Honestly evaluate AI work quality using a two-axis scoring system. Use after completing a task, code review, or work session to get an unbiased assessment. Detects score inflation, forces devil's advocate reasoning, and persists scores across sessions."
     },
     {
+      "name": "ship-gate",
+      "source": "../../engineering/skills/ship-gate",
+      "category": "engineering-advanced",
+      "description": ">"
+    },
+    {
       "name": "skill-security-auditor",
       "source": "../../engineering/skills/skill-security-auditor",
       "category": "engineering-advanced",
@@ -1139,7 +1145,7 @@
       "description": "Software engineering and technical skills"
     },
     "engineering-advanced": {
-      "count": 38,
+      "count": 39,
       "source": "../../engineering",
       "description": "Advanced engineering skills - agents, RAG, MCP, CI/CD, databases, observability"
     },
