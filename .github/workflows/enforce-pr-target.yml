@@ -13,32 +13,36 @@ jobs:
   check-target:
     runs-on: ubuntu-latest
     steps:
-      - name: Block PRs targeting main from non-maintainers
+      - name: Allow only dev → main; auto-close all other PRs to main
         uses: actions/github-script@v7
         with:
           script: |
             const pr = context.payload.pull_request;
+            const headRef = pr.head.ref;
             const author = pr.user.login;
 
-            // Maintainers who can PR to main directly
-            const maintainers = ['alirezarezvani'];
-
-            if (maintainers.includes(author)) {
-              console.log(`✅ ${author} is a maintainer — PR to main allowed.`);
+            // Project rule: ONLY dev → main is allowed as the release path.
+            // Feature branches, hotfixes, and anything else must go through dev first.
+            // This applies to all authors, including maintainers — no exceptions.
+            // Rationale: the auto-PR feature in Claude Code on the web (and any other
+            // automation) defaults to the repo's default branch (main), bypassing the
+            // intended feature → dev → main flow. The strict rule below prevents that.
+            if (headRef === 'dev') {
+              console.log(`✅ Release PR (dev → main) by @${author} allowed.`);
               return;
             }
 
-            const message = `👋 Hi @${author}, thanks for your contribution!
+            const message = `👋 Hi @${author}, thanks for the contribution.
 
-            All community PRs should target the \`dev\` branch, not \`main\`. The \`main\` branch is reserved for releases.
+            This repository enforces a strict release path: **\`dev\` → \`main\` only**. All other branches must merge into \`dev\` first. This PR is targeting \`main\` from \`${headRef}\`, so it's being closed automatically.
 
             **How to fix:**
-            1. Close this PR
-            2. Reopen it targeting \`dev\` instead of \`main\`
+            1. Close this PR (already done by this workflow)
+            2. Re-open targeting \`dev\` instead of \`main\`
 
-            Or I can do it for you — just click "Edit" at the top right of this PR and change the base branch to \`dev\`.
+            Or click "Edit" at the top of this PR and change the base branch to \`dev\`, then this workflow will not re-trigger.
 
-            See our [Contributing Guide](https://github.com/alirezarezvani/claude-skills/blob/dev/CONTRIBUTING.md) for details.`;
+            See our [Contributing Guide](https://github.com/alirezarezvani/claude-skills/blob/dev/CONTRIBUTING.md) for the full workflow.`;
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
@@ -54,4 +58,4 @@ jobs:
               state: 'closed',
             });
 
-            core.setFailed(`PR #${pr.number} targets main. Closed automatically.`);
+            core.setFailed(`PR #${pr.number} targets main from '${headRef}' (not dev). Closed automatically.`);
