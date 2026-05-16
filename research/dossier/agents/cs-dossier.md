@@ -72,7 +72,7 @@ The cs-dossier agent orchestrates the `dossier` skill across hypothesis-tested e
 
 - [cs-litreview](../../litreview/agents/cs-litreview.md) — sibling, academic literature
 - [cs-grants](../../grants/agents/cs-grants.md) — sibling, NIH funding
-- [cs-pulse](../../../engineering/pulse/agents/cs-pulse.md) — sibling, multi-platform recency
+- [cs-pulse](../../../research/pulse/agents/cs-pulse.md) — sibling, multi-platform recency
 - Future: cs-patent (patent prior-art), cs-syllabus (course readings)
 
 ---

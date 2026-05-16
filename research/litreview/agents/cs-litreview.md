@@ -154,7 +154,7 @@ research_guide_{topic-slug}_{date}.docx
 
 ## Related Agents
 
-- [cs-pulse](../../../engineering/pulse/agents/cs-pulse.md) — research-pack sibling (will move to research/ in cleanup PR)
+- [cs-pulse](../../../research/pulse/agents/cs-pulse.md) — research-pack sibling
 - [cs-grill-master](../../../engineering/grill-me/agents/cs-grill-master.md) — plan-only grill (different domain)
 - Future research-pack siblings: cs-grants, cs-patent, cs-dossier, cs-syllabus
 

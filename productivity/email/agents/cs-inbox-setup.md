@@ -192,7 +192,7 @@ Re-run /cs:inbox-setup when business/pricing/priorities change.
 
 - [cs-inbox-triage](./cs-inbox-triage.md) — companion skill, reads the KB this skill writes
 - [cs-grill-master](../../../engineering/grill-me/agents/cs-grill-master.md) — plan-only grill (different domain)
-- [cs-capture](../../../engineering/capture/agents/cs-capture.md) — brain-dump organizer (different mode)
+- [cs-capture](../../../productivity/capture/agents/cs-capture.md) — brain-dump organizer (different mode)
 
 ## References
 

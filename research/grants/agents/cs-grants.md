@@ -66,7 +66,7 @@ The cs-grants agent orchestrates the `grants` skill:
 ## Related Agents
 
 - [cs-litreview](../../litreview/agents/cs-litreview.md) — sibling, academic literature (no RePORTER)
-- [cs-pulse](../../../engineering/pulse/agents/cs-pulse.md) — sibling, multi-platform recency
+- [cs-pulse](../../../research/pulse/agents/cs-pulse.md) — sibling, multi-platform recency
 - Future: cs-patent, cs-dossier, cs-syllabus
 
 ---

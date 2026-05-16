@@ -163,8 +163,8 @@ Instead of writing to ./landing-pages/<slug>.html:
 ## Related Agents
 
 - `landing-page-generator` (product-team/) — sibling, Next.js TSX conversion-focused (different output target)
-- [cs-capture](../../../engineering/capture/agents/cs-capture.md) — different domain (productivity)
-- [cs-pulse](../../../engineering/pulse/agents/cs-pulse.md) — different domain (research)
+- [cs-capture](../../../productivity/capture/agents/cs-capture.md) — different domain (productivity)
+- [cs-pulse](../../../research/pulse/agents/cs-pulse.md) — different domain (research)
 
 ## References
 

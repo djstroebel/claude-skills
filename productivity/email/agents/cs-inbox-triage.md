@@ -194,8 +194,8 @@ Generated at <timestamp>. KB updated: {N blocklist, M tracker}.
 ## Related Agents
 
 - [cs-inbox-setup](./cs-inbox-setup.md) — companion skill, writes the KB this skill reads
-- [cs-pulse](../../../engineering/pulse/agents/cs-pulse.md) — external research (different domain)
-- [cs-capture](../../../engineering/capture/agents/cs-capture.md) — brain-dump organizer (different mode)
+- [cs-pulse](../../../research/pulse/agents/cs-pulse.md) — external research (different domain)
+- [cs-capture](../../../productivity/capture/agents/cs-capture.md) — brain-dump organizer (different mode)
 
 ## References
 
